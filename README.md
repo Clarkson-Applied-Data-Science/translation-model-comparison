@@ -183,7 +183,7 @@ translation-model-comparison/
 ## 👩‍💻 Author
 
 Bhavana Manda
-MS Data Science 
+
 
 ---
 
