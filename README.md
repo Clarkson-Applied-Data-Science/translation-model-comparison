@@ -140,9 +140,6 @@ results/ → outputs and evaluation files
 
 ---
 
-## ⚠️ Dataset Note
-
-Large datasets (e.g., `.tsv`) are excluded due to GitHub size limitations.
 
 ---
 
