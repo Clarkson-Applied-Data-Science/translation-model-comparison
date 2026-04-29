@@ -147,12 +147,15 @@ Green indicates high-quality translations, while red indicates poor translations
 ## 📂 Project Structure
 
 ```
-notebooks/ → model implementations  
-data/ → input datasets (small samples only)  
-results/ → outputs and evaluation files  
-```
+translation-model-comparison/   
+│   
+├── data/   
+├── img/   
+├── notebooks/   
+├── results/   
+└── README.md   
 
----
+```
 
 
 ---
