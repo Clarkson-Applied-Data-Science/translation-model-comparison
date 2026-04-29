@@ -148,8 +148,7 @@ Green indicates high-quality translations, while red indicates poor translations
 ```
 translation-model-comparison/   
 │   
-├── data/   
-├── img/   
+├── data/     
 ├── notebooks/   
 ├── results/   
 └── README.md   
