@@ -60,12 +60,12 @@ This converts similarity into a binary evaluation:
 
 ## 📈 Results Summary
 
-| Model          | Avg Cosine Similarity | Accuracy (%) |
-| -------------- | --------------------- | ------------ |
-| TranslateGemma | 0.25                  | 12.5%        |
-| MarianMT       | 0.81                  | 62.0%        |
-| NLLB           | 0.87                  | 76.5%        |
-
+| Model           | Avg Cosine Similarity | Accuracy (%) |
+|----------------|----------------------|--------------|
+| TranslateGemma | 0.25                 | 12.5%        |
+| MarianMT       | 0.81                 | 62.0%        |
+| NLLB           | 0.87                 | 76.5%        |
+| mBART          | 0.84                 | 64.0%        |
 ![alt text](image.png)
 
 ![alt text](image-1.png)
