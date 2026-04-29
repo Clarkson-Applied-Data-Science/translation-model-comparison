@@ -66,6 +66,9 @@ This converts similarity into a binary evaluation:
 | MarianMT       | 0.81                  | 62.0%        |
 | NLLB           | 0.87                  | 76.5%        |
 
+![alt text](image.png)
+
+![alt text](image-1.png)
 👉 **NLLB achieved the best overall performance**
 
 ---
