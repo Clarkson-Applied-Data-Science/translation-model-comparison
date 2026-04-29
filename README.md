@@ -1,31 +1,42 @@
-# Translation Model Comparison (English ↔ Hindi)
+# 🌐 Translation Model Comparison (English ↔ Hindi)
 
-## 📌 Project Overview
+## 📌 Overview
 
-This project compares multiple machine translation models by translating English sentences to Hindi and then back to English.
+This project evaluates multiple neural machine translation models by performing **English → Hindi → English (back-translation)** and analyzing how well each model preserves the original meaning.
 
-The goal is to evaluate how well different models preserve meaning using similarity metrics.
-
----
-
-## 🤖 Models Used
-
-* TranslateGemma
-* MarianMT
-* NLLB (No Language Left Behind)
-* mBART (optional extension)
+The focus is not only on accuracy but also on **performance trade-offs**, including runtime and model complexity.
 
 ---
 
-## 🧪 Methodology
+## 🎯 Objectives
 
-1. Translate English → Hindi
-2. Translate Hindi → English (back-translation)
-3. Compare original and back-translated sentences
-4. Evaluate using:
+* Compare translation quality across models
+* Measure semantic preservation using cosine similarity
+* Analyze accuracy using a defined threshold
+* Evaluate runtime efficiency
+* Understand how model architecture affects performance
 
-   * Cosine Similarity
-   * Accuracy (threshold-based)
+---
+
+## 🤖 Models Evaluated
+
+| Model          | Type                       | Approx Parameters | Runtime |
+| -------------- | -------------------------- | ----------------- | ------- |
+| TranslateGemma | Lightweight LLM (local)    | ~4B               | ~12 min |
+| MarianMT       | Transformer (optimized MT) | ~300M–600M        | ~2 min  |
+| NLLB           | Large multilingual model   | ~1.3B–3.3B        | ~8 min  |
+| mBART          | Multilingual seq2seq model | ~610M             | ~7 min  |
+
+---
+
+## ⚙️ Methodology
+
+### 🔄 Pipeline
+
+1. Input English sentences
+2. Translate → Hindi
+3. Back-translate → English
+4. Compare original vs back-translated text
 
 ---
 
@@ -33,49 +44,133 @@ The goal is to evaluate how well different models preserve meaning using similar
 
 ### 🔹 Cosine Similarity
 
-Measures semantic similarity between original and translated text.
+Measures **semantic similarity** between original and back-translated sentence using sentence embeddings.
 
-### 🔹 Accuracy
-
-Defined as:
-
-* 1 if similarity ≥ 0.80
-* 0 otherwise
+* Range: `0 → 1`
+* Closer to `1` = better meaning preservation
 
 ---
 
-## 📈 Results
+### 🔹 Accuracy (Threshold-Based)
 
-| Model          | Avg Similarity | Accuracy (%) |
-| -------------- | -------------- | ------------ |
-| TranslateGemma | 0.25           | 12.5%        |
-| MarianMT       | 0.81           | 62.0%        |
-| NLLB           | 0.87           | 76.5%        |
+A prediction is considered **correct** if:
 
-👉 NLLB performed the best overall.
+```text
+Cosine Similarity ≥ 0.80
+```
+
+This converts similarity into a binary evaluation:
+
+* 1 → Accurate
+* 0 → Not accurate
+
+---
+
+## 📈 Results Summary
+
+| Model          | Avg Cosine Similarity | Accuracy (%) |
+| -------------- | --------------------- | ------------ |
+| TranslateGemma | 0.25                  | 12.5%        |
+| MarianMT       | 0.81                  | 62.0%        |
+| NLLB           | 0.87                  | 76.5%        |
+
+👉 **NLLB achieved the best overall performance**
+
+---
+
+## ⏱️ Runtime Analysis
+
+| Model          | Runtime | Observations                                        |
+| -------------- | ------- | --------------------------------------------------- |
+| TranslateGemma | 12 min  | Slow due to local LLM inference and no optimization |
+| MarianMT       | 2 min   | Fastest due to optimized translation architecture   |
+| NLLB           | 8 min   | Balanced performance and accuracy                   |
+| mBART          | 7 min   | Slightly slower due to multilingual complexity      |
+
+---
+
+## 🧠 Parameter & Performance Insights
+
+## ⚙️ Model Parameters Summary
+
+| Model           | Type                | Parameters | Architecture        | Source                   |
+|----------------|---------------------|------------|---------------------|----------------------------|
+| TranslateGemma | LLM (General)       | ~4 Billion | Decoder Transformer | Ollama                     |
+| MarianMT       | NMT (Specialized)   | ~300M–600M | Encoder–Decoder     | Helsinki-NLP (HuggingFace) |
+| NLLB           | Multilingual MT     | ~1.3B–3.3B | Encoder–Decoder     | Meta (Facebook AI)         |
+| mBART          | Multilingual MT     | ~610M      | Encoder–Decoder     | Meta (Facebook AI)         |
+
+---
+
+### 🔹 Why Parameters Affect Accuracy
+
+* More parameters → better ability to capture:
+
+  * grammar
+  * context
+  * cultural meaning
+
+BUT:
+
+* More parameters → slower runtime
+* Higher memory usage
+* Increased computational cost
+
+---
+
+### 🔹 Why Runtime Differs
+
+| Factor              | Impact                                  |
+| ------------------- | --------------------------------------- |
+| Model size          | Larger → slower                         |
+| Architecture        | Optimized MT models (Marian) are faster |
+| Hardware usage      | CPU vs GPU affects speed                |
+| Tokenization method | Complex models take longer              |
+
+---
+
+## 📉 Error Analysis (Key Observations)
+
+* Named entities sometimes changed (e.g., “Muriel” → “Muller”)
+* Informal phrases were poorly translated
+* Some models introduced semantic drift
+* Literal translation vs contextual meaning varied across models
 
 ---
 
 ## 📂 Project Structure
 
-* `comparison.ipynb` → main evaluation notebook
-* `*_results.xlsx` → model outputs
-* `*_bt.xlsx` → back-translation results
+```
+notebooks/ → model implementations  
+data/ → input datasets (small samples only)  
+results/ → outputs and evaluation files  
+```
 
 ---
 
-## ⚠️ Note
+## ⚠️ Dataset Note
 
-Large datasets are not included due to GitHub size limitations.
+Large datasets (e.g., `.tsv`) are excluded due to GitHub size limitations.
 
 ---
 
 ## 🚀 Future Improvements
 
-* Add BLEU / ROUGE metrics
+* Add BLEU / ROUGE evaluation metrics
+* Fine-tune models on domain-specific data
+* Use GPU acceleration for faster inference
 * Train custom translation model
-* Use larger datasets
-* Optimize translation parameters
+* Add real-time API-based translation comparison
+
+---
+
+## 🧩 Technologies Used
+
+* Python
+* Pandas
+* Hugging Face Transformers
+* SentenceTransformers
+* Cosine Similarity (Scikit-learn)
 
 ---
 
@@ -83,3 +178,9 @@ Large datasets are not included due to GitHub size limitations.
 
 Bhavana
 MS Data Science — Clarkson University
+
+---
+
+## 💡 Key Takeaway
+
+This project highlights the **trade-off between accuracy and efficiency** in machine translation systems and demonstrates how model architecture and scale directly impact real-world performance.
