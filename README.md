@@ -6,11 +6,6 @@ This project evaluates multiple neural machine translation models by performing 
 
 The focus is not only on accuracy but also on **performance trade-offs**, including runtime and model complexity.
 
-## 👩‍💻 Author
-
-Bhavana Manda
-MS Data Science
-
 ---
 
 ## 🎯 Objectives
@@ -172,10 +167,20 @@ results/ → outputs and evaluation files
 
 ---
 
+## 🧩 Technologies Used
+
+* Python
+* Pandas
+* Hugging Face Transformers
+* SentenceTransformers
+* Cosine Similarity (Scikit-learn)
 
 ---
 
+## 👩‍💻 Author
 
+Bhavana Manda
+MS Data Science 
 
 ---
 
