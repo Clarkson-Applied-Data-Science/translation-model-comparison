@@ -67,7 +67,6 @@ This converts similarity into a binary evaluation:
 | NLLB           | 0.87                 | 76.5%        |
 | mBART          | 0.84                 | 64.0%        |
 ![alt text](image.png)
-
 ![alt text](image-1.png)
 👉 **NLLB achieved the best overall performance**
 
