@@ -18,14 +18,6 @@ The focus is not only on accuracy but also on **performance trade-offs**, includ
 
 ---
 
-## 🤖 Models Evaluated
-
-| Model          | Type                       | Approx Parameters | Runtime |
-| -------------- | -------------------------- | ----------------- | ------- |
-| TranslateGemma | Lightweight LLM (local)    | ~4B               | ~12 min |
-| MarianMT       | Transformer (optimized MT) | ~300M–600M        | ~2 min  |
-| NLLB           | Large multilingual model   | ~1.3B–3.3B        | ~8 min  |
-| mBART          | Multilingual seq2seq model | ~610M             | ~7 min  |
 
 ---
 
