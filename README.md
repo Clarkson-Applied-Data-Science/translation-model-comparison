@@ -71,6 +71,7 @@ This converts similarity into a binary evaluation:
 ![alt text](image-1.png)
 👉 **NLLB achieved the best overall performance**
 
+
 ---
 
 ## ⏱️ Runtime Analysis
@@ -131,6 +132,16 @@ BUT:
 * Some models introduced semantic drift
 * Literal translation vs contextual meaning varied across models
 
+![alt text](image-2.png)
+
+
+
+## 📊 Model Best and Worst Visualization
+
+This plot shows cosine similarity scores for selected sentences.  
+Green indicates high-quality translations, while red indicates poor translations.
+
+![alt text](image-3.png)
 ---
 
 ## 📂 Project Structure
