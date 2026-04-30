@@ -1,14 +1,19 @@
-# 🌐 Translation Model Comparison (English ↔ Hindi)
+#  Translation Model Comparison (English ↔ Hindi)
 
-## 📌 Overview
+##  Overview
 
 This project evaluates multiple neural machine translation models by performing **English → Hindi → English (back-translation)** and analyzing how well each model preserves the original meaning.
 
 The focus is not only on accuracy but also on **performance trade-offs**, including runtime and model complexity.
 
+
+##  Author
+
+Bhavana Manda
+
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 * Compare translation quality across models
 * Measure semantic preservation using cosine similarity
@@ -21,9 +26,9 @@ The focus is not only on accuracy but also on **performance trade-offs**, includ
 
 ---
 
-## ⚙️ Methodology
+##  Methodology
 
-### 🔄 Pipeline
+###  Pipeline
 
 1. Input English sentences
 2. Translate → Hindi
@@ -32,7 +37,7 @@ The focus is not only on accuracy but also on **performance trade-offs**, includ
 
 ---
 
-## 📊 Evaluation Metrics
+##  Evaluation Metrics
 
 ### 🔹 Cosine Similarity
 
@@ -58,7 +63,7 @@ This converts similarity into a binary evaluation:
 
 ---
 
-## 📈 Results Summary
+##  Results Summary
 
 | Model           | Avg Cosine Similarity | Accuracy (%) |
 |----------------|----------------------|--------------|
@@ -68,12 +73,12 @@ This converts similarity into a binary evaluation:
 | mBART          | 0.84                 | 64.0%        |
 ![alt text](image.png)
 ![alt text](image-1.png)
-👉 **NLLB achieved the best overall performance**
+ **NLLB achieved the best overall performance**
 
 
 ---
 
-## ⏱️ Runtime Analysis
+##  Runtime Analysis
 
 | Model          | Runtime | Observations                                        |
 | -------------- | ------- | --------------------------------------------------- |
@@ -84,9 +89,9 @@ This converts similarity into a binary evaluation:
 
 ---
 
-## 🧠 Parameter & Performance Insights
+##  Parameter & Performance Insights
 
-## ⚙️ Model Parameters Summary
+##  Model Parameters Summary
 
 | Model           | Type                | Parameters | Architecture        | Source                   |
 |----------------|---------------------|------------|---------------------|----------------------------|
@@ -124,7 +129,7 @@ BUT:
 
 ---
 
-## 📉 Error Analysis (Key Observations)
+##  Error Analysis (Key Observations)
 
 * Named entities sometimes changed (e.g., “Muriel” → “Muller”)
 * Informal phrases were poorly translated
@@ -135,7 +140,7 @@ BUT:
 
 
 
-## 📊 Model Best and Worst Visualization
+##  Model Best and Worst Visualization
 
 This plot shows cosine similarity scores for selected sentences.  
 Green indicates high-quality translations, while red indicates poor translations.
@@ -143,7 +148,7 @@ Green indicates high-quality translations, while red indicates poor translations
 ![alt text](image-3.png)
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 translation-model-comparison/   
@@ -158,7 +163,7 @@ translation-model-comparison/
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 * Add BLEU / ROUGE evaluation metrics
 * Fine-tune models on domain-specific data
@@ -168,7 +173,7 @@ translation-model-comparison/
 
 ---
 
-## 🧩 Technologies Used
+##  Technologies Used
 
 * Python
 * Pandas
@@ -178,13 +183,11 @@ translation-model-comparison/
 
 ---
 
-## 👩‍💻 Author
 
-Bhavana Manda
 
 
 ---
 
-## 💡 Key Takeaway
+##  Key Takeaway
 
 This project highlights the **trade-off between accuracy and efficiency** in machine translation systems and demonstrates how model architecture and scale directly impact real-world performance.
