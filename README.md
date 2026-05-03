@@ -182,13 +182,14 @@ translation-model-comparison/
 
 ---
 
-##  Technologies Used
+## Technologies Used
 
-* Python
-* Pandas
-* Hugging Face Transformers
-* SentenceTransformers
-* Cosine Similarity (Scikit-learn)
+- Python  
+- Pandas  
+- Hugging Face Transformers  
+- SentenceTransformers  
+- Scikit-learn  
+- Streamlit 
 
 ---
 
