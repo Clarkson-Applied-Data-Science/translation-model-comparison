@@ -51,7 +51,7 @@ Measures **semantic similarity** between original and back-translated sentence u
 
 ---
 
-### 🔹 Accuracy (Threshold-Based)
+### 🔹 Accuracy 
 
 A prediction is considered **correct** if:
 
@@ -132,7 +132,7 @@ BUT:
 
 ---
 
-##  Error Analysis (Key Observations)
+##  Error Analysis 
 
 * Named entities sometimes changed (e.g., “Muriel” → “Muller”)
 * Informal phrases were poorly translated
