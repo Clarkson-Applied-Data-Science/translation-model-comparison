@@ -148,6 +148,20 @@ Green indicates high-quality translations, while red indicates poor translations
 ![alt text](image-3.png)
 ---
 
+
+## Dashboard (Streamlit)
+
+An interactive Streamlit dashboard was developed to visualize model performance and demonstrate real-time translation.
+
+
+### Features
+- Model comparison using cosine similarity and accuracy
+- Visualizations 
+- Worst-case analysis of translations
+- Live translation demo with back-translation and similarity score
+
+![alt text](image-4.png)      
+![alt text](image-5.png)
 ##  Project Structure
 
 ```
