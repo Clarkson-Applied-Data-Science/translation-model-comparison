@@ -1,4 +1,4 @@
-streamlit
+
 pandas
 openpyxl
 transformers
@@ -6,3 +6,4 @@ sentencepiece
 torch
 sentence-transformers
 scikit-learn
+streamlit
