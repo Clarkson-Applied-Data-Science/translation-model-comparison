@@ -165,7 +165,7 @@ An interactive Streamlit dashboard was developed to visualize model performance 
 ```
 translation-model-comparison/
 │
-├── data/                   
+├── data/                  
 ├── notebooks/               
 ├── results/ 
 ├── .gitignore                
