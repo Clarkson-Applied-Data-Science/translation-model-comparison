@@ -1,10 +1,10 @@
 
 
 
-Bhavana Manda- Data Science 
 
 #  Translation Model Comparison (English ↔ Hindi)
-
+**Bhavana Manda**  
+*M.S. Data Science*
 
 ##  Overview
 
