@@ -96,12 +96,12 @@ This converts similarity into a binary evaluation:
 
 ##  Model Parameters Summary
 
-| Model           | Type                | Parameters | Architecture        | Source                   |
-|----------------|---------------------|------------|---------------------|----------------------------|
-| TranslateGemma | LLM (General)       | ~4 Billion | Decoder Transformer | Ollama                     |
-| MarianMT       | NMT (Specialized)   | ~300M–600M | Encoder–Decoder     | Helsinki-NLP (HuggingFace) |
-| NLLB           | Multilingual MT     | ~1.3B–3.3B | Encoder–Decoder     | Meta (Facebook AI)         |
-| mBART          | Multilingual MT     | ~610M      | Encoder–Decoder     | Meta (Facebook AI)         |
+| Model          | Type                | Parameters   | Source                   |
+|----------------|---------------------|--------------|--------------------------|
+| TranslateGemma | LLM (General)       | ~4 Billion   | Ollama                   |
+| MarianMT       | NMT (Specialized)   | ~300M–600M   | HuggingFace              |
+| NLLB           | Multilingual MT     | ~1.3B–3.3B   | Meta AI                  |
+| mBART          | Multilingual MT     | ~610M        | Meta  AI                 |
 
 ---
 
@@ -134,7 +134,7 @@ BUT:
 
 ##  Error Analysis 
 
-* Named entities sometimes changed (e.g., “Muriel” → “Muller”)
+* Named entities sometimes changed 
 * Informal phrases were poorly translated
 * Some models introduced semantic drift
 * Literal translation vs contextual meaning varied across models
