@@ -160,8 +160,7 @@ An interactive Streamlit dashboard was developed to visualize model performance 
 - Worst-case analysis of translations
 - Live translation demo with back-translation and similarity score
 
-![alt text](image-4.png)      
-![alt text](image-5.png)
+
 ##  Project Structure
 
 ```
