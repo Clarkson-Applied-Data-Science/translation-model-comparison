@@ -179,7 +179,6 @@ translation-model-comparison/
 * Fine-tune models on domain-specific data
 * Use GPU acceleration for faster inference
 * Train custom translation model
-* Add real-time API-based translation comparison
 
 ---
 
