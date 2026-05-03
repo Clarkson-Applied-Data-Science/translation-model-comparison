@@ -149,7 +149,7 @@ Green indicates high-quality translations, while red indicates poor translations
 ---
 
 
-## Dashboard (Streamlit)
+## Dashboard 
 
 An interactive Streamlit dashboard was developed to visualize model performance and demonstrate real-time translation.
 
