@@ -1,9 +1,7 @@
 
 pandas
-openpyxl
 transformers
-sentencepiece
-torch
-sentence-transformers
-scikit-learn
+openpyxl
 streamlit
+scikit-learn
+numpy
