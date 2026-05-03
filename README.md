@@ -164,17 +164,15 @@ An interactive Streamlit dashboard was developed to visualize model performance 
 ##  Project Structure
 
 ```
-translation-model-comparison/   
-│   
-├── data/     
-├── notebooks/   
-├── results/   
-└── README.md   
-
+translation-model-comparison/      
+│                 
+├── data/                                       
+├── notebooks/                                
+├── results/                 
+├── .gitignore                                               
+├── README.md                   
+├── requirements.txt                  
 ```
-
-
----
 
 ##  Future Improvements
 
