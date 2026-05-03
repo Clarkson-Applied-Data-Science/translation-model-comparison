@@ -1,4 +1,10 @@
+
+
+
+Bhavana Manda- Data Science 
+
 #  Translation Model Comparison (English ↔ Hindi)
+
 
 ##  Overview
 
@@ -7,9 +13,6 @@ This project evaluates multiple neural machine translation models by performing 
 The focus is not only on accuracy but also on **performance trade-offs**, including runtime and model complexity.
 
 
-##  Author
-
-Bhavana Manda
 
 ---
 
